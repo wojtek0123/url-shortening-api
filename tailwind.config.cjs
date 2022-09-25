@@ -12,6 +12,7 @@ module.exports = {
       'neutral-grayish-violet': 'hsl(257, 7%, 63%)',
       'neutral-very-dark-blue': 'hsl(255, 11%, 22%)',
       'neutral-very-dark-violet': 'hsl(260, 8%, 14%)',
+      'primary-gray': 'hsl(225, 33%, 95%)',
       white: '#fff',
     },
     fontFamily: {
