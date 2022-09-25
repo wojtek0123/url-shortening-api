@@ -49,7 +49,7 @@ export default function App() {
           <button
             type='button'
             title='hamburger menu'
-            className='pt-1 lg:hidden'
+            className='p-2 lg:hidden cursor-pointer z-10'
             onClick={() => setShowMenu((prevState) => !prevState)}
           >
             <div className='w-7 h-1 mb-[0.4rem] bg-neutral-gray'></div>
@@ -87,7 +87,7 @@ export default function App() {
             </div>
           </div>
           {showMenu && (
-            <div className='bg-primary-dark-violet absolute -bottom-6 translate-y-full w-full px-5 py-5 flex flex-col z-10 text-white rounded-xl items-center justify-center text-xl'>
+            <div className='bg-primary-dark-violet absolute -bottom-6 left-5 right-5 translate-y-full px-5 py-5 flex flex-col z-10 text-white rounded-xl items-center justify-center text-xl lg:hidden'>
               <a className='my-3 p-1 cursor-pointer'>Features</a>
               <a className='my-3 p-1 cursor-pointer'>Pricing</a>
               <a className='my-3 p-1 cursor-pointer'>Resources</a>
