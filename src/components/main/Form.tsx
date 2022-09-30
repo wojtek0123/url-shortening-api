@@ -1,13 +1,20 @@
 import DefaultButton from '../ui/DefaultButton';
 import bgBoostMobile from '../../assets/images/bg-boost-mobile.svg';
 import bgBoostDesktop from '../../assets/images/bg-boost-desktop.svg';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { v4 as uuid } from 'uuid';
+
+const initShortenLinks = localStorage.getItem('shorten-links')
+  ? JSON.parse(localStorage.getItem('shorten-links') || '')
+  : [];
+const initEnteredLinks = localStorage.getItem('entered-links')
+  ? JSON.parse(localStorage.getItem('entered-links') || '')
+  : [];
 
 const Form: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [shortenedLinks, setShortenedLinks] = useState<string[]>([]);
-  const [enteredLinks, setEnteredLinks] = useState<string[]>([]);
+  const [shortenedLinks, setShortenedLinks] = useState<string[]>(initShortenLinks);
+  const [enteredLinks, setEnteredLinks] = useState<string[]>(initEnteredLinks);
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [copiedTextToClickboard, setCopiedTextToClickboard] = useState('');
 
@@ -54,6 +61,11 @@ const Form: React.FC = () => {
   const clearErrorMessage = () => {
     setErrorMessage('');
   };
+
+  useEffect(() => {
+    localStorage.setItem('shorten-links', JSON.stringify(shortenedLinks));
+    localStorage.setItem('entered-links', JSON.stringify(enteredLinks));
+  }, [shortenedLinks]);
 
   return (
     <>
