@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer className='w-full bg-neutral-very-dark-violet text-white pt-14 flex items-center justify-center lg:pb-14'>
       <div className='flex flex-col lg:flex-row w-full lg:items-start lg:justify-between max-w-[1440px] px-5 2xl:px-0'>
         <img src={logoWhite} alt='Shortly' className='mx-auto lg:ml-0 lg:mr-48' />
-        <div className='flex flex-col items-center justify-center lg:justify-start lg:items-start lg:flex-row lg:mr-20'>
+        <div className='flex flex-col items-center justify-center flex-grow lg:justify-end lg:items-start lg:flex-row lg:mr-20'>
           <div className='flex flex-col justify-center items-center lg:items-start mt-14 lg:mt-0 lg:mr-10'>
             <h4 className='mb-4 text-lg'>Features</h4>
             <a
