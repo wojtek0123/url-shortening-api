@@ -116,7 +116,7 @@ const Form: React.FC = () => {
                 </p>
                 <button
                   type='button'
-                  className={`w-full lg:w-36 text-center text-white bg-primary-cyan py-3 rounded-lg lg:px-10 ${
+                  className={`w-full lg:w-36 text-center text-white bg-primary-cyan py-3 rounded-lg lg:px-10 hover:opacity-70 transition-opacity duration-300 font-bold ${
                     copiedTextToClickboard === shortenedLink
                       ? 'bg-primary-dark-violet'
                       : 'bg-primary-cyan'
