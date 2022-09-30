@@ -114,7 +114,7 @@ const Form: React.FC = () => {
             )}
           </form>
         </div>
-        <section className='-mt-20 lg:-mt-14 mb-28'>
+        <div className='-mt-20 lg:-mt-14 mb-28'>
           {shortenedLinks.map((shortenedLink, index) => (
             <div
               key={uuid()}
@@ -140,7 +140,7 @@ const Form: React.FC = () => {
               </div>
             </div>
           ))}
-        </section>
+        </div>
       </div>
     </>
   );

@@ -13,9 +13,9 @@ const Navigation: React.FC = () => {
         className='p-2 lg:hidden cursor-pointer z-10'
         onClick={() => setShowMenu((prevState) => !prevState)}
       >
-        <div className='w-7 h-1 mb-[0.4rem] bg-neutral-gray'></div>
-        <div className='w-7 h-1 my-[0.4rem] bg-neutral-gray'></div>
-        <div className='w-7 h-1 mt-[0.4rem] bg-neutral-gray'></div>
+        <p className='w-7 h-1 mb-[0.4rem] bg-neutral-gray'></p>
+        <p className='w-7 h-1 my-[0.4rem] bg-neutral-gray'></p>
+        <p className='w-7 h-1 mt-[0.4rem] bg-neutral-gray'></p>
       </button>
       <div className='hidden lg:flex items-center justify-between w-full ml-8 text-neutral-gray'>
         <div>
